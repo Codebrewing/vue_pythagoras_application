@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
+    {{flag}}
+    <button @click.prevent="a()">flag</button>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -12,6 +14,16 @@ export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  data(){
+    return{
+      flag:false
+    }
+  },
+  methods:{
+    a(){
+      alert(this.flag)
+    }
   }
 }
 </script>
